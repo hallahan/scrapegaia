@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "format": "prettier --write \"*.js\"",
-    "clean": "rm -rf data/* && cd data && mkdir areas photos routes tracks waypoints",
+    "clean": "rm -rf data/* && cd data && mkdir areas photos routes tracks waypoints folders",
     "start": "node index.js"
   },
   "author": "Nick Hallahan",

@@ -188,11 +188,18 @@ async function scrapePhoto(geojson) {
   return Promise.all(promises)
 }
 
+async function scrapeFolders() {
+  const folders = await list('folder')
+  saveList('folders', folders)
+  console.log('finished folders', folders.length)
+}
+
 function main() {
   scrapeTracks()
   scrapeRoutes()
   scrapeWaypoints()
   scrapeAreas()
+  scrapeFolders()
 }
 
 main()
