@@ -1,0 +1,53 @@
+[
+  {
+    "id": "3e217425ebcf1f5b2873877bb46e2ff6",
+    "updated_date": "2023-02-12T17:01:31Z",
+    "time_created": "2023-02-12T17:01:07Z",
+    "last_updated_on_server": "2023-02-12T17:01:31.100156",
+    "deleted": false,
+    "title": "Tuktoyaktuk",
+    "notes": "",
+    "public": false,
+    "folder": "",
+    "folder_name": "",
+    "path": "route",
+    "distance": 5419195.871784243,
+    "total_ascent": 27154.624999999924,
+    "total_time": 0.0,
+    "activities": []
+  },
+  {
+    "id": "c054b764c208c9dad294e78e61221c1d",
+    "updated_date": "2018-05-19T01:32:27Z",
+    "time_created": "2018-05-19T01:27:46Z",
+    "last_updated_on_server": "2018-05-19T01:32:27.342000",
+    "deleted": false,
+    "title": "Ishi Wilderness",
+    "notes": "",
+    "public": false,
+    "folder": "",
+    "folder_name": "",
+    "path": "route",
+    "distance": 22299.055394063726,
+    "total_ascent": 0.0,
+    "total_time": 0.0,
+    "activities": []
+  },
+  {
+    "id": "602e9011e35b79598adaf3bd107d8acc",
+    "updated_date": "2018-05-19T01:32:27Z",
+    "time_created": "2018-05-19T01:24:42Z",
+    "last_updated_on_server": "2018-05-19T01:32:27.304000",
+    "deleted": false,
+    "title": "Mill Creek",
+    "notes": "",
+    "public": false,
+    "folder": "",
+    "folder_name": "",
+    "path": "route",
+    "distance": 19256.95451343165,
+    "total_ascent": 0.0,
+    "total_time": 0.0,
+    "activities": []
+  }
+]
