@@ -1,14 +1,14 @@
 {
   "name": "scrapegaia",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.1.0",
+  "description": "Scrape your memories from GaiaGPS.",
   "main": "index.js",
   "scripts": {
     "format": "prettier --write \"*.js\"",
     "clean": "rm -rf data/* && cd data && mkdir areas photos routes tracks waypoints",
     "start": "node index.js"
   },
-  "author": "",
+  "author": "Nick Hallahan",
   "license": "MIT",
   "dependencies": {
     "axios": "^1.3.2"

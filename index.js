@@ -153,34 +153,39 @@ async function scrapePhoto(geojson) {
     return
   }
 
-  const photo = photos[0]
+  const promises = []
 
-  const url = photo.fullsize_url
+  for (const photo of photos) {
+    const url = photo.fullsize_url
 
-  try {
-    const res = await axios({
-      method: 'get',
-      url,
-      headers: {
-        cookie: config.cookie,
-      },
-      responseType: 'stream',
-    })
-    res.data.pipe(fs.createWriteStream(`data/photos/${photo.id}.jpg`))
-
-    return new Promise((resolve, reject) => {
-      res.data.on('end', () => {
-        resolve()
+    try {
+      const res = await axios({
+        method: 'get',
+        url,
+        headers: {
+          cookie: config.cookie,
+        },
+        responseType: 'stream',
       })
-
-      res.data.on('error', e => {
-        reject(e)
+      res.data.pipe(fs.createWriteStream(`data/photos/${photo.id}.jpg`))
+  
+      const p = new Promise((resolve, reject) => {
+        res.data.on('end', () => {
+          resolve()
+        })
+  
+        res.data.on('error', e => {
+          reject(e)
+        })
       })
-    })
-  } catch (e) {
-    console.error(`Error fetching photo ${photo.id} for ${geojson.id}.`)
-    return Promise.reject()
+      promises.push(p)
+    } catch (e) {
+      console.error(`Error fetching photo ${photo.id} for ${geojson.id}.`)
+      return Promise.reject()
+    }
   }
+  
+  return Promise.all(promises)
 }
 
 function main() {
