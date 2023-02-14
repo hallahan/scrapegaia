@@ -6,7 +6,8 @@
   "scripts": {
     "format": "prettier --write \"*.js\"",
     "clean": "rm -rf data/* && cd data && mkdir areas photos routes tracks waypoints folders",
-    "start": "node index.js"
+    "start": "node index.js",
+    "combine": "node combine.js"
   },
   "author": "Nick Hallahan",
   "license": "MIT",
